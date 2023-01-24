@@ -56,11 +56,28 @@
          input[type=password]{
             background-color: aqua;
          }
-
-         
+        p.baslik{
+            background-color: brown;
+            height: 30px;
+            margin-top: 30px;
+            padding:7px ;
+            text-align: center;
+            vertical-align: bottom; /*Neden çalışmıyor?
+            import etmek???*/
+            font-size: larger;
+        }
+        .kutucuk{
+            background-color: turquoise;
+            width: 200px;
+            height: 200px;
+            border: 7px double wheat;
+            box-sizing: border-box; /*Normalde sen border eklediğinde o şeklin alanı artar hatta siteden taşmaya bile sebep olabilir ama bu özellik sayesinde kutunun içinde olur bu olay yani kutu genişlemez varolan postansiyelini kullanır.*/
+        }
     </style>
 </head>
 <body>
+    <p class="baslik"> Lorem ipsum <em style="text-decoration: line-through underline overline ">Lorem, ipsum dolor.</em>dolor sit amet consectetur adipisicing elit. Quisquam?</p>
+    <!--wavy kabul edilmedi?? renk de -->
     <table>
         <tr>
             <th>İsim</th>
@@ -92,5 +109,9 @@
     Email: <input type="text"/>
     Şifre: <input type="password"/>
     <input type="submit" /> <!-- submit buton yapısı oluşturur, password nokta nokta gözükmesini sağlar.-->
+
+    <div class="kutucuk"></div>
+    <div style="border-radius:250%;" class="kutucuk"></div> <!--Yüzde olunca hep yuvarlak oluyo??
+    span??-->
 </body>
 </html>
