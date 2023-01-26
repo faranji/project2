@@ -72,6 +72,17 @@
             height: 200px;
             border: 7px double wheat;
             box-sizing: border-box; /*Normalde sen border eklediğinde o şeklin alanı artar hatta siteden taşmaya bile sebep olabilir ama bu özellik sayesinde kutunun içinde olur bu olay yani kutu genişlemez varolan postansiyelini kullanır.*/
+            text-align: center;
+            vertical-align:middle; /* çalışmadı??*/
+        }
+        .kutu{
+            display: flex;
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            /*direction: rtl; (right to left) alttakiyle aynı anlamda*/
+            flex-direction: column; 
+            flex-wrap: wrap; /*Bunun sayesinde kutunun içindeki kutuların küçülmeden ve dışarı taşmadan alta inmesini sağlar.*/
         }
     </style>
 </head>
@@ -109,9 +120,12 @@
     Email: <input type="text"/>
     Şifre: <input type="password"/>
     <input type="submit" /> <!-- submit buton yapısı oluşturur, password nokta nokta gözükmesini sağlar.-->
-
-    <div class="kutucuk"></div>
-    <div style="border-radius:250%;" class="kutucuk"></div> <!--Yüzde olunca hep yuvarlak oluyo??
+    <div class="kutu">
+        <div class="kutucuk">kutu1</div>
+        <div style="border-radius:250%;" class="kutucuk">kutu2</div> <!--Yüzde olunca hep yuvarlak oluyo??
     span??-->
+        <div class="kutucuk">kutu3</div>
+        <div style="border-radius:250%;" class="kutucuk">kutu4</div>
+    </div>
 </body>
 </html>
